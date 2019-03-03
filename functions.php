@@ -159,3 +159,12 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+
+function register_my_menus() {
+  register_nav_menus(
+    array(
+      'header-menu' => __( 'Navigation' )
+     )
+   );
+ }
+ add_action( 'init', 'register_my_menus' );

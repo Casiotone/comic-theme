@@ -10,19 +10,66 @@
 get_header();
 ?>
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+<div class="insta-images">
 
-			get_template_part( 'template-parts/content', 'page' );
+	<img id="hero" class="hero-img"/>
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+	<div id="grid" class="grid-images"></div>
 
-		endwhile; // End of the loop.
-		?>
+	<button id="more" style="display: none;">Load more</button>
+
+</div>
+
+<script type="text/javascript">
+(function($) {
+	var key = '2237041594.1677ed0.c6f7cfb38a6846fe975ececb2cb484b3',
+		url = 'https://api.instagram.com/v1/users/self/media/recent/?access_token=' + key,
+		init = true,
+		$more = $('#more').click(loadImages),
+		$grid = $('#grid'),
+		$hero = $('#hero');
+
+	function renderResults(results) {
+		console.log(results);
+		url = results.pagination.next_url;
+
+		if (url) {
+			$more.show();
+		} else {
+			$more.hide();
+		}
+
+		var data = results.data;
+
+		if (init) {
+			var hero = data.shift();
+			$hero.attr('src', hero.images.standard_resolution.url);
+			init = false;
+		}
+
+		var item;
+
+		for(var i = 0; i < data.length; i++) {
+			item = $('<img class="thumbnail">').attr('src', data[i].images.low_resolution.url);
+			$grid.append(item);
+		}
+
+	}
+
+	function loadImages() {
+		$.ajax({
+			url: url,
+			success: renderResults
+		});
+	}
+
+	loadImages();
+
+})(jQuery);
+
+
+
+</script>
 
 
 <?php get_footer(); ?>

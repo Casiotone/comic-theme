@@ -17,13 +17,26 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="<?php bloginfo('description'); ?>">
+	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/reset.css">
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 
 	<header>
+
+		<?php wp_nav_menu( array(
+			'theme_location' => 'header-menu',
+			'menu_class' => 'nav'
+		 ) ); ?>
+
+	</header>
+
+		<?php
+		/*
+
 		<ul class="nav">
 			<li><a href="comic-static/index.html">Home</a></li>
 			<li><a href="gallery/index.html">Gallery</a></li>
@@ -31,6 +44,10 @@
 			<li><a href="payment/index.html">Payment</a></li>
 			<li><a href="session/index.html">Session</a></li>
 		</ul>
-	</header>
 
-	<main class="content-home">
+		*/
+
+	   ?>
+
+
+	<main>
