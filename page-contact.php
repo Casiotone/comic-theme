@@ -6,8 +6,15 @@
 			
 			the_post();
 
-			the_content();
+			?>
 
+			<div class="my-content-wrapper-class">
+
+				<?php the_content(); ?>
+
+			</div>
+
+			<?php
 
 		endwhile; // End of the loop.
 		?>
