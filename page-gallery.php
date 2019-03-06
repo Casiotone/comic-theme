@@ -1,14 +1,23 @@
-<?php
-/**
- * The template for gallery
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package Comic-theme
- */
+<?php get_header(); ?>
 
-get_header();
-?>
+<?php
+
+	while ( have_posts() ) :
+
+		the_post();
+
+		?>
+
+		<div class="my-content-wrapper-class">
+
+			<?php the_content(); ?>
+
+		</div>
+
+	<?php
+
+	endwhile; // End of the loop.
+	?>
 
 <div class="insta-images">
 
