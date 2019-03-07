@@ -7,18 +7,24 @@
 
 			?>
 
-			<div class="my-content-wrapper-class contact-page">
+			<div class="page-content page-contact">
 
-				<div class="left-column">
-				<?php the_content(); ?>
-					
-				</div>
-				<div class="right-column">
-					<?php
-					if ( has_post_thumbnail() ) {
-						the_post_thumbnail();
-					}
-					?>
+				<h1 class="page-content__title"><?php the_title(); ?></h1>
+
+				<div class="page-content__columns">
+
+					<div class="page-content__columns--left">
+						<?php the_content(); ?>
+					</div>
+				
+					<div class="page-content__columns--right">
+						<?php
+						if ( has_post_thumbnail() ) {
+							the_post_thumbnail();
+						}
+						?>
+					</div>
+				
 				</div>
 
 			</div>

@@ -1,33 +1,34 @@
 <?php get_header(); ?>
 
 <?php
+while ( have_posts() ) :
+	
+	the_post();
 
-	while ( have_posts() ) :
+	?>
 
-		the_post();
+	<div class="page-content page-gallery">
 
-		?>
+		<h1 class="page-content__title"><?php the_title(); ?></h1>
 
-		<div class="my-content-wrapper-class">
+		<div class="page-content__row"><?php the_content(); ?></div>
 
-			<?php the_content(); ?>
-
+		<div class="page-content__row">
+			<div class="insta-images">
+				<img id="hero" class="hero-img"/>
+				<div id="grid" class="grid-images"></div>
+				<button id="more" style="display: none;">Load more</button>
+			</div>
 		</div>
+
+	</div>
 
 	<?php
 
-	endwhile; // End of the loop.
-	?>
+endwhile; // End of the loop.
+?>
 
-<div class="insta-images">
 
-	<img id="hero" class="hero-img"/>
-
-	<div id="grid" class="grid-images"></div>
-
-	<button id="more" style="display: none;">Load more</button>
-
-</div>
 
 <script type="text/javascript">
 (function($) {
