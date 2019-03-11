@@ -7,19 +7,17 @@
 
 			?>
 
-            <!-- === NEED TO CREATE ONE CENTRAL COLUMN LAYOUT ===== -->
-
-			<div class="page-content-single-column">
+			<div class="page-about">
 
 				<h1 class="page-content__title"><?php the_title(); ?></h1>
 
-					<div class="page-about">
+					<div class="page-about-content">
 
 						<?php the_content(); ?>
 
 					</div>
 
-			</div> --->
+			</div> 
 
 			<?php
 
