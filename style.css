@@ -13,11 +13,11 @@ body {
 
 header {
     /* background-color: #ffcccc; */
-    border-bottom: 5px solid red;
+    /* border-bottom: 5px solid red; */
 }
 
 main {
-    width: 1000px;
+    max-width: 1300px;
     height: 100%;
     margin: auto;
     padding: 0;
@@ -27,49 +27,68 @@ h1,
 h2,
 h3,
 h4,
-h5 { 
-    font-size: 2rem; 
+h5 {
+    font-size: 2rem;
     letter-spacing: 0.1rem;
     margin: 0 0 0.5rem;
 }
 
-h2 { 
-    color: orange; 
+h2 {
+    color: #af1c2d;
 }
 
-h3 { 
-    color: green; 
+h3 {
+    color: #770b17;
 }
 
 p {
     font-size: 1.5rem;
     margin: 0 0 0.5rem;
     letter-spacing: 0.1rem;
+    color: #890d1a;
 }
 
 
 /* navigation menu */
-.nav ul {
+.nav ul,
+ul.nav {
     display: flex;
     justify-content: center;
     padding: 20px 0;
     font-size: 3rem;
 }
 
-.nav li {
+.nav li,
+ul.nav li {
     padding: 0 20px;
 }
 
-.nav a {
+.nav a,
+ul.nav a {
     text-decoration: none;
     color: red;
 }
 
+.nav a:hover {
+  color: #af1c2d;
+}
+
+.nav a .current-page-item {
+    color: #af1c2d;
+}
 
 /* page content */
 .page-content {
     margin: 2rem 0;
+    padding-left: 4.375rem;
 }
+
+/* .page-content-single-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+} */
 
 .page-content__title {
     display: none;
@@ -80,6 +99,11 @@ p {
 
 .page-content__columns {
     display: flex;
+    padding: 20px;
+}
+
+.page-about {
+    /* column down the centre - backgroud img border - flex centre */
 }
 
 .page-content__columns--left,
@@ -87,6 +111,11 @@ p {
     width: 50%;
     max-width: 50%;
 }
+
+.page-content__columns--left {
+    padding-left: 30px;
+}
+
 
 .page-content__row img,
 .page-content__columns--left img,
@@ -139,7 +168,7 @@ p {
 }
 
 .insta-images button {
-    color: orange;
+    color: #890d1a;
     font-size: 2rem;
     border: 5px solid orange;
     border-radius: 10px;

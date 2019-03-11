@@ -2,7 +2,7 @@
 
 <?php
 while ( have_posts() ) :
-	
+
 	the_post();
 
 	?>
@@ -32,7 +32,7 @@ endwhile; // End of the loop.
 
 <script type="text/javascript">
 (function($) {
-	var key = '2237041594.1677ed0.c6f7cfb38a6846fe975ececb2cb484b3',
+	var key = '6836785562.1677ed0.6abb79320011468a89615fa19c40159c',
 		url = 'https://api.instagram.com/v1/users/self/media/recent/?access_token=' + key,
 		init = true,
 		$more = $('#more').click(loadImages),

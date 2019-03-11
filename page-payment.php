@@ -2,7 +2,7 @@
 
 		<?php
 		while ( have_posts() ) :
-			
+
 			the_post();
 
 			?>
@@ -16,11 +16,11 @@
 					<div class="page-content__columns--left">
 						<?php the_content(); ?>
 					</div>
-				
+
 					<div class="page-content__columns--right">
-						<img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_200x51.png" alt="PayPal Logo">
+						 <?php echo Paypal_payment_accept(); ?>
 					</div>
-				
+
 				</div>
 
 				<div class="page-content__row">
