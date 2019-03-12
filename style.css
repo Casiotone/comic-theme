@@ -124,23 +124,30 @@ ul.nav a {
 }
 
 
-
-
-
-
 /* page specific styles */
 .page-home {
     padding-top: 2rem;
     text-align: center;
 }
 
+.page-payment {
+    height: 100%;
+    background-image: url('img/payment-page-background-3.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top;
+    padding-top: 25px;
+}
+}
+
 .page-payment .page-content__columns--right {
     text-align: center;
+     color: #770b17;
 }
 
 .page-about {
     height: 100%;
-    background-image: url('img/about-page-background.png');
+    background-image: url('img/about-page-background-7.png');
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: top;
@@ -149,7 +156,15 @@ ul.nav a {
 
 .page-session {
     height: 100%;
-    background-image: url('img/............png');
+    background-image: url('img/session-page-background-1.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top;
+}
+
+.page-contact {
+    height: 100%;
+    background-image: url('img/contact-page-background-2.png');
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: top;

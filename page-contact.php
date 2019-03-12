@@ -2,30 +2,20 @@
 
 		<?php
 		while ( have_posts() ) :
-			
+
 			the_post();
 
 			?>
 
-			<div class="page-content page-contact">
+			<div class="page-contact">
 
-				<h1 class="page-content__title"><?php the_title(); ?></h1>
+				<h1 class="page-contact__title"><?php the_title(); ?></h1>
 
-				<div class="page-content__columns">
+					<div class="page-contact-content">
 
-					<div class="page-content__columns--left">
 						<?php the_content(); ?>
+
 					</div>
-				
-					<div class="page-content__columns--right">
-						<?php
-						if ( has_post_thumbnail() ) {
-							the_post_thumbnail();
-						}
-						?>
-					</div>
-				
-				</div>
 
 			</div>
 
