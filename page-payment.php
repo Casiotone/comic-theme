@@ -18,12 +18,14 @@
 					</div>
 
 					<div class="page-content__columns--right">
-						 <?php echo Paypal_payment_accept(); ?>
+						<div class="paypal">
+							<?php echo Paypal_payment_accept(); ?>
+						</div>
 					</div>
 
 				</div>
 
-				<div class="page-content__row">
+				<div class="page-content__single">
 					<?php
 						if ( has_post_thumbnail() ) {
 							the_post_thumbnail();

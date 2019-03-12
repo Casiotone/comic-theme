@@ -7,15 +7,15 @@
 
 			?>
 
-			<div class="page-session">
+			<div class="page-session page-content">
 
 				<h1 class="page-content__title"><?php the_title(); ?></h1>
 
-					<div class="page-session-content">
+				<div class="page-content__single">
 
-						<?php the_content(); ?>
+					<?php the_content(); ?>
 
-					</div>
+				</div>
 
 			</div>
 

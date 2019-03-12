@@ -2,11 +2,7 @@
 
 	<div class="page-home">
 
-		<img
-			src="<?php bloginfo('template_directory'); ?>/img/homepage.jpg"
-			width="1300"
-			height="auto"
-		/>
+		<div style="height: 727px; max-width: 1300px; background: url(<?php bloginfo('template_directory'); ?>/img/homepage.jpg) top;"></div>
 
 	</div>
 

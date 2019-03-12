@@ -7,15 +7,15 @@
 
 			?>
 
-			<div class="page-contact">
+			<div class="page-contact page-content">
 
-				<h1 class="page-contact__title"><?php the_title(); ?></h1>
+				<h1 class="page-content__title"><?php the_title(); ?></h1>
 
-					<div class="page-contact-content">
+				<div class="page-content__single">
 
-						<?php the_content(); ?>
+					<?php the_content(); ?>
 
-					</div>
+				</div>
 
 			</div>
 

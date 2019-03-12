@@ -53,7 +53,7 @@ endwhile; // End of the loop.
 
 		if (init) {
 			var hero = data.shift();
-			$hero.attr('src', hero.images.standard_resolution.url);
+			$hero.attr('src', hero.images.low_resolution.url);
 			init = false;
 		}
 
