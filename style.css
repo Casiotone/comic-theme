@@ -80,6 +80,7 @@ ul.nav {
 .nav li,
 ul.nav li {
     padding: 0 20px;
+    margin-top: 20px;
 }
 
 .nav a,
@@ -95,6 +96,17 @@ ul.nav a {
 .nav a .current-page-item {
     color: #af1c2d;
 }
+
+
+/* TRYING TO MAKE MOBILE IMAGE SMALL */
+
+.page-home {
+    background-image: url("home-mobile-edit.png") cover;
+    height: auto;
+    width: 100%;
+}
+
+/* ABOVE DID NOT WORK */
 
 @media (min-width: 1020px) {
     .nav ul,
@@ -170,7 +182,7 @@ ul.nav a {
     }
     .page-session {
         background-image: url('img/session-page-background-1.png');
-    } 
+    }
     .page-contact {
         background-image: url('img/contact-page-background-2.png');
     }
