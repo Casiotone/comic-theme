@@ -98,16 +98,6 @@ ul.nav a {
 }
 
 
-/* TRYING TO MAKE MOBILE IMAGE SMALL */
-
-.page-home {
-    background-image: url("home-mobile-edit.png") cover;
-    height: auto;
-    width: 100%;
-}
-
-/* ABOVE DID NOT WORK */
-
 @media (min-width: 1020px) {
     .nav ul,
     ul.nav {
@@ -167,8 +157,26 @@ ul.nav a {
 
 /* page specific styles */
 .page-home {
-    padding-top: 2rem;
     text-align: center;
+    height: 100%;
+}
+
+.page-home > div {
+    background-image: url('img/mobile-homepage-opt.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+@media (min-width: 1020px) {
+    .page-home {
+        padding-top: 2rem;
+    }
+    .page-home > div {
+        height: 727px;
+        max-width: 1300px;
+        background: url('img/homepage.jpg') top;
+    }
 }
 
 
